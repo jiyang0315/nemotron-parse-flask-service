@@ -96,6 +96,7 @@ def _run_inference(
 
     items: List[Dict[str, Any]] = []
     for cls, bbox, text in zip(classes, bboxes, texts):
+        print("text",text)
         items.append(
             {
                 "class": cls,

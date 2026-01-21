@@ -1,0 +1,8 @@
+{
+  "processor_class": "NemotronParseProcessor",
+  "image_processor_type": "NemotronParseImageProcessor",
+  "auto_map": {
+    "AutoProcessor": "hf_nemotron_parse_processor.NemotronParseProcessor",
+    "AutoImageProcessor": "hf_nemotron_parse_processor.NemotronParseImageProcessor"
+  }
+}

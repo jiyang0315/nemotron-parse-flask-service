@@ -1,0 +1,24 @@
+{
+  "feature_extractor_type": "NemotronParseImageProcessor",
+  "image_processor_type": "NemotronParseImageProcessor",
+  "processor_class": "NemotronParseProcessor",
+  "auto_map": {
+    "AutoImageProcessor": "hf_nemotron_parse_processor.NemotronParseImageProcessor",
+    "AutoProcessor": "hf_nemotron_parse_processor.NemotronParseProcessor"
+  },
+  "do_normalize": false,
+  "do_rescale": true,
+  "rescale_factor": 0.00392156862745098,
+  "size": {
+    "height": 2048,
+    "width": 1648,
+    "longest_edge": [
+      2048,
+      1648
+    ]
+  },
+  "final_size": [
+    2048,
+    1648
+  ]
+}

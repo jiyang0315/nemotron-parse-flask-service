@@ -16,7 +16,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_path)
 processor = AutoProcessor.from_pretrained(model_path, trust_remote_code=True)
 
 # Load image
-image = Image.open("./debug_page_1.png")
+image = Image.open("./debug_page_4.png")
 task_prompt = "</s><s><predict_bbox><predict_classes><output_markdown>"
 
 # Process image
@@ -48,6 +48,6 @@ for bbox in bboxes:
   draw.rectangle((bbox[0], bbox[1], bbox[2], bbox[3]), outline="red")
 
 # 保存结果图
-out_path = "./debug_page_1_out.png"
+out_path = "./debug_page_4_out.png"
 image.save(out_path)
 print(f"Saved: {out_path}")

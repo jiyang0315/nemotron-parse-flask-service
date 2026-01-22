@@ -16,8 +16,8 @@ tokenizer = AutoTokenizer.from_pretrained(model_path)
 processor = AutoProcessor.from_pretrained(model_path, trust_remote_code=True)
 
 # Load image
-image = Image.open("./debug_page_4.png")
-task_prompt = "</s><s><predict_bbox><predict_classes><output_markdown>"
+image = Image.open("./inputs/debug_page_5.png")
+task_prompt = "<predict_bbox><predict_classes><output_markdown>"
 
 # Process image
 inputs = processor(images=[image], text=task_prompt, return_tensors="pt").to(device)
@@ -42,12 +42,12 @@ texts = [postprocess_text(text, cls = cls, table_format=table_format, text_forma
 for cl, bb, txt in zip(classes, bboxes, texts):
     print(cl, ': ', txt)
 
-# OPTIONAL - Draw bounding boxes
-draw = ImageDraw.Draw(image)
-for bbox in bboxes:
-  draw.rectangle((bbox[0], bbox[1], bbox[2], bbox[3]), outline="red")
+# # OPTIONAL - Draw bounding boxes
+# draw = ImageDraw.Draw(image)
+# for bbox in bboxes:
+#   draw.rectangle((bbox[0], bbox[1], bbox[2], bbox[3]), outline="red")
 
-# 保存结果图
-out_path = "./debug_page_4_out.png"
-image.save(out_path)
-print(f"Saved: {out_path}")
+# # 保存结果图
+# out_path = "./inputs/debug_page_5_out.png"
+# image.save(out_path)
+# print(f"Saved: {out_path}")
